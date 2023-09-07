@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Main {{test}}</h1>
+    <h1>Main</h1>
+    <div>{{category}}</div> <!-- model로 데이터바인딩한 값 중괄호 두개로 값 받아오기, 리스트 전체 출력됨 -->
+
+    <ul>
+    {{#category}}
+        <li>{{categoryName}}</li>
+    {{/category}}
+    </ul>
 </body>
 </html>

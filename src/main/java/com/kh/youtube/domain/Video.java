@@ -16,6 +16,8 @@ public class Video {
 	private int videoViews;
 	private String videoUrl;
 	private String videoPhoto;
+
+
 	private Category category;
 	private Channel channel;
 	private Member member;
