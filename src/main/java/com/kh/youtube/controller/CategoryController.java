@@ -36,6 +36,7 @@ public class CategoryController {
         }
     }
 
+    // 카테고리 추가
     @PostMapping("/category")
     public ResponseEntity<Category> create(@RequestBody Category category){
         try{
@@ -44,7 +45,8 @@ public class CategoryController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
-
+    
+    // 카테고리 수정
     @PutMapping("/category")
     public ResponseEntity<Category> update(@RequestBody Category category){
         try{
@@ -54,6 +56,7 @@ public class CategoryController {
         }
     }
 
+    // 카테고리 삭제
     @DeleteMapping("/category/{id}")
     public ResponseEntity<Category> delete(@PathVariable int id){
         try{

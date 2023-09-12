@@ -28,11 +28,6 @@ public class ChannelService {
         return channel;
     }
 
-    // 특정 멤버의 모든 채널 조회
-    public List<Channel> showMember(String id){
-        return channelDAO.findByMemberId(id);
-    }
-
     public Channel create(Channel channel){
         return channelDAO.save(channel);
     }
@@ -53,4 +48,11 @@ public class ChannelService {
         channelDAO.delete(target);
         return target;
     }
+
+    // 특정 멤버의 모든 채널 조회
+    public List<Channel> showMember(String id){
+        return channelDAO.findByMemberId(id);
+    }
+
+
 }
