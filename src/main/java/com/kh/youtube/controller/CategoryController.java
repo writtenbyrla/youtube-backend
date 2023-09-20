@@ -11,6 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/*")
+@CrossOrigin(origins={"*"}, maxAge = 6000)
+// Home.jsp에서 useEffect로 url 추가하면 정책위반 관련 오류뜸, 여기서 잡고감
 public class CategoryController {
 
     @Autowired

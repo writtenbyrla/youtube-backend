@@ -1,7 +1,6 @@
 package com.kh.youtube.service;
 
 import com.kh.youtube.domain.Video;
-import com.kh.youtube.domain.VideoComment;
 import com.kh.youtube.repo.VideoDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
