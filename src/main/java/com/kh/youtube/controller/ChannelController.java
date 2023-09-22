@@ -28,7 +28,7 @@ import java.util.UUID;
 @CrossOrigin(origins={"*"}, maxAge=6000)
 public class ChannelController {
 
-    @Value("${spring.servlet.multipart.location}") // application.properties에 있는 변수(업로드된 파일의 경로)
+    @Value("${youtube.upload.path}") // application.properties에 있는 변수(업로드된 파일의 경로)
     private String uploadPath;
 
     @Autowired
@@ -79,7 +79,7 @@ public class ChannelController {
 
         // 파일업로드가 끝났으니 경로 (savePhoto), name, desc, memberId(id)
         Channel vo = new Channel();
-        vo.setChannelPhoto(savePhoto);
+        vo.setChannelPhoto(uuid + "_" + realPhoto);
         vo.setChannelName(name);
         vo.setChannelDesc(desc);
         Member member = new Member();
