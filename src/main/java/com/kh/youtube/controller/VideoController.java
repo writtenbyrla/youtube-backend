@@ -54,6 +54,7 @@ public class VideoController {
 
     @GetMapping("/video")
     public ResponseEntity<List<Video>> showAllVideo(@RequestParam(name="page", defaultValue = "1") int page,  @RequestParam(name="category", required = false) Integer category){
+        // Integar인 경우 null값 넣을 수 있음
 
         // 정렬
         Sort sort = Sort.by("videoCode").descending();
